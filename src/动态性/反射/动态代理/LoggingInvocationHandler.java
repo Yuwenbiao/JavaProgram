@@ -1,6 +1,5 @@
-package 反射.动态代理;
+package 动态性.反射.动态代理;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Arrays;

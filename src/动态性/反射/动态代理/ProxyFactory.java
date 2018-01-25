@@ -1,4 +1,4 @@
-package 反射.动态代理;
+package 动态性.反射.动态代理;
 
 import java.lang.reflect.Proxy;
 import java.util.ArrayList;
@@ -8,6 +8,10 @@ import java.util.List;
  * 为任何接口及其实现类创建代理的工厂方法
  */
 public class ProxyFactory {
+    public static void main(String[] args) {
+        useGenericProxy();
+    }
+
     public static <T> T makeProxy(Class<T> intf, final T object) {
         LoggingInvocationHandler handler = new LoggingInvocationHandler(object);
         ClassLoader d = object.getClass().getClassLoader();
