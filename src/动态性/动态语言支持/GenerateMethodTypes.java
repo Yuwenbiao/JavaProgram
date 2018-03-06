@@ -53,6 +53,18 @@ public class GenerateMethodTypes {
     }
 
     /**
-     * 一次性
+     * 一次性修改MethodType中的返回值和所有参数的类型的示例
      */
+    private void wrapAndGeneric() {
+        //(int,double)Integer
+        MethodType mt = MethodType.methodType(Integer.class, int.class, double.class);
+        //(Integer,Double)Integer
+        MethodType wrapped = mt.wrap();
+        //(int,double)int
+        MethodType unwrapped = mt.unwrap();
+        //(Object,Object)Object
+        MethodType generic = mt.generic();
+        //(int,double)Object
+        MethodType erased = mt.erase();
+    }
 }
